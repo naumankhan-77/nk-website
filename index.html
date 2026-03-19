@@ -33,8 +33,8 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,37,69,0.97);b
 /* HERO */
 .hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(232,160,32,0.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
-#hero-3d{position:absolute;top:0;right:0;width:55%;height:100%;pointer-events:none;z-index:0;opacity:0.85;}
-.hero-content{position:relative;z-index:1;}
+#hero-3d{position:absolute;top:0;right:0;width:60%;height:100%;pointer-events:none;z-index:0;opacity:1;display:block;}
+.hero-content{position:relative;z-index:1;max-width:52%;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);color:var(--amber);padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:2rem;width:fit-content;}
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;}
 .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6.5vw,5rem);font-weight:300;color:var(--white);line-height:1.05;max-width:750px;margin-bottom:1.5rem;}
@@ -225,7 +225,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
     <li><a href="#immigration">Immigration</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#positions" class="nav-cta">Submit CV</a>
+  <a href="https://forms.gle/63oH7PYTxr6Nurop9" target="_blank" class="nav-cta">Submit CV</a>
 </nav>
 
 <!-- HERO -->
@@ -320,63 +320,63 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
       <div class="pos-title">General Operative</div>
       <div class="pos-type">Full-time · Dublin & Leinster</div>
       <div class="pos-tags"><span class="pos-tag">Entry level</span><span class="pos-tag">Immediate start</span><span class="pos-tag">CSCS card preferred</span></div>
-      <button class="apply-btn" onclick="openModal('General Operative','Construction & Trades')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="construction">
       <div class="pos-sector">Construction & Trades</div>
       <div class="pos-title">Electrician</div>
       <div class="pos-type">Full-time / Contract · Nationwide</div>
       <div class="pos-tags"><span class="pos-tag">Safe Pass required</span><span class="pos-tag">RECI registered</span><span class="pos-tag">3+ yrs exp</span></div>
-      <button class="apply-btn" onclick="openModal('Electrician','Construction & Trades')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="construction">
       <div class="pos-sector">Construction & Trades</div>
       <div class="pos-title">Plumber / Pipefitter</div>
       <div class="pos-type">Full-time / Contract · Nationwide</div>
       <div class="pos-tags"><span class="pos-tag">Trade cert required</span><span class="pos-tag">Domestic & commercial</span></div>
-      <button class="apply-btn" onclick="openModal('Plumber / Pipefitter','Construction & Trades')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="construction">
       <div class="pos-sector">Construction & Trades</div>
       <div class="pos-title">Site Manager / Foreman</div>
       <div class="pos-type">Full-time · Dublin & surrounding</div>
       <div class="pos-tags"><span class="pos-tag">5+ yrs exp</span><span class="pos-tag">Safe Pass</span><span class="pos-tag">Management exp</span></div>
-      <button class="apply-btn" onclick="openModal('Site Manager / Foreman','Construction & Trades')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="healthcare">
       <div class="pos-sector">Healthcare</div>
       <div class="pos-title">Healthcare Assistant (HCA)</div>
       <div class="pos-type">Full-time / Part-time · Nationwide</div>
       <div class="pos-tags"><span class="pos-tag">QQI Level 5 preferred</span><span class="pos-tag">Immediate start</span></div>
-      <button class="apply-btn" onclick="openModal('Healthcare Assistant (HCA)','Healthcare')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="healthcare">
       <div class="pos-sector">Healthcare</div>
       <div class="pos-title">Nurse (RGN / RPN)</div>
       <div class="pos-type">Full-time / Agency · Nationwide</div>
       <div class="pos-tags"><span class="pos-tag">NMBI registration required</span><span class="pos-tag">Hospital & care home</span></div>
-      <button class="apply-btn" onclick="openModal('Nurse (RGN / RPN)','Healthcare')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="warehouse">
       <div class="pos-sector">Warehouse & Logistics</div>
       <div class="pos-title">Warehouse Operative</div>
       <div class="pos-type">Full-time / Temporary · Dublin & Meath</div>
       <div class="pos-tags"><span class="pos-tag">Immediate start</span><span class="pos-tag">Picking & packing</span><span class="pos-tag">Day & night shifts</span></div>
-      <button class="apply-btn" onclick="openModal('Warehouse Operative','Warehouse & Logistics')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="warehouse">
       <div class="pos-sector">Warehouse & Logistics</div>
       <div class="pos-title">Forklift Driver / Reach Truck</div>
       <div class="pos-type">Full-time · Dublin & Meath</div>
       <div class="pos-tags"><span class="pos-tag">Counterbalance licence</span><span class="pos-tag">Reach truck exp</span></div>
-      <button class="apply-btn" onclick="openModal('Forklift Driver / Reach Truck','Warehouse & Logistics')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
     <div class="position-card" data-sector="general">
       <div class="pos-sector">General</div>
       <div class="pos-title">General Operations Staff</div>
       <div class="pos-type">Full-time / Part-time · Flexible</div>
       <div class="pos-tags"><span class="pos-tag">All levels welcome</span><span class="pos-tag">Various industries</span></div>
-      <button class="apply-btn" onclick="openModal('General Operations Staff','General')">Submit CV for this role</button>
+      <button class="apply-btn" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit CV for this role</button>
     </div>
   </div>
 </section>
@@ -387,7 +387,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
     <button class="modal-close" onclick="closeModal()">&#x2715;</button>
     <h3>Apply for this role</h3>
     <div class="modal-role" id="modal-role-label"></div>
-    <div class="form-notice">&#128274; Your CV is stored securely for up to <strong>180 days</strong> under GDPR. Request deletion anytime at naumankhan@nkrecruitment.com.</div>
+    <div class="form-notice">&#128274; Your CV is stored securely for up to <strong>180 days</strong> under GDPR. Request deletion anytime at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0beb1a5bdb1bebbb8b1be90bebba2b5b3a2a5b9a4bdb5bea4feb3bfbd">[email&#160;protected]</a>.</div>
     <div class="form-row-2">
       <div class="form-group"><label>First Name *</label><input type="text" id="f-fname" placeholder="John"></div>
       <div class="form-group"><label>Last Name *</label><input type="text" id="f-lname" placeholder="Smith"></div>
@@ -410,7 +410,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
       <input type="checkbox" id="f-agree">
       <label for="f-agree">I agree to the <a onclick="showPrivacy()">Privacy Policy</a> and consent to NK Recruitment storing my data for up to 180 days for recruitment purposes.</label>
     </div>
-    <button class="btn-primary" style="width:100%;" onclick="submitCV()">Submit Application</button>
+    <button class="btn-primary" style="width:100%;" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Submit Application on Google Form</button>
     <div id="modal-success" style="display:none;margin-top:1rem;padding:0.75rem;background:#f0fdf4;border-radius:6px;font-size:0.85rem;color:#166534;text-align:center;">&#10003; Application received! We'll be in touch within 5–7 business days.</div>
   </div>
 </div>
@@ -513,7 +513,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
       </div>
       <div class="contact-detail">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <div><span>Email</span>naumankhan@nkrecruitment.com</div>
+        <div><span>Email</span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caa4abbfa7aba4a1a2aba48aa4a1b8afa9b8bfa3bea7afa4bee4a9a5a7">[email&#160;protected]</a></div>
       </div>
       <div class="contact-detail">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -532,7 +532,8 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
         <select><option value="">Select a subject...</option><option>Job enquiry</option><option>Immigration consultation</option><option>Employer / hiring enquiry</option><option>Student placement</option><option>General enquiry</option></select>
       </div>
       <div class="form-group"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
-      <button class="btn-primary" style="width:100%;">Send Message</button>
+      <button class="btn-primary" style="width:100%;" onclick="window.open('https://forms.gle/63oH7PYTxr6Nurop9','_blank')">Send via Google Form</button>
+      <p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;">Or email us directly: <a href="mailto:naumankhan@nkrecruitment.com" style="color:var(--amber);">naumankhan@nkrecruitment.com</a></p>
     </div>
   </div>
 </section>
@@ -562,11 +563,11 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
     <p>We use essential cookies (required for site function) and, with your consent, analytics cookies. We do not use advertising or tracking cookies. You may withdraw consent at any time by contacting us.</p>
     <h3>6. Your rights under GDPR</h3>
     <ul><li>Right to access your data</li><li>Right to correct inaccurate data</li><li>Right to erasure ("right to be forgotten")</li><li>Right to restrict or object to processing</li><li>Right to data portability</li></ul>
-    <p>To exercise any right, email <strong>naumankhan@nkrecruitment.com</strong>. We will respond within 30 days.</p>
+    <p>To exercise any right, email <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e886899d85898683808986a886839a8d8b9a9d819c858d869cc68b8785">[email&#160;protected]</a></strong>. We will respond within 30 days.</p>
     <h3>7. Data sharing</h3>
     <p>We do not sell your data. We share your CV with prospective employers only with your explicit consent. We may share limited data with immigration solicitor partners where you have requested a referral.</p>
     <h3>8. Contact & complaints</h3>
-    <p>Data Controller: NK Recruitment, Navan, Co. Meath, Ireland. Email: naumankhan@nkrecruitment.com. You may also lodge a complaint with the Data Protection Commission at <strong>dataprotection.ie</strong>.</p>
+    <p>Data Controller: NK Recruitment, Navan, Co. Meath, Ireland. Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e7e8fce4e8e7e2e1e8e7c9e7e2fbeceafbfce0fde4ece7fda7eae6e4">[email&#160;protected]</a>. You may also lodge a complaint with the Data Protection Commission at <strong>dataprotection.ie</strong>.</p>
     <div style="margin-top:2rem;"><button class="btn-primary" onclick="hidePrivacy()">Close Privacy Policy</button></div>
   </div>
 </section>
@@ -613,7 +614,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
         <li><a href="#">Navan, Co. Meath, Ireland</a></li>
         <li><a href="tel:+353833458472">Ire: +353 83 345 8472</a></li>
         <li></li>
-        <li>naumankhan@nkrecruitment.com</li>
+        <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97f9f6e2faf6f9fcfff6f9d7f9fce5f2f4e5e2fee3faf2f9e3b9f4f8fa">[email&#160;protected]</a></li>
         <li><a href="#">Mon–Fri: 9:00 AM – 5:00 PM</a></li>
       </ul>
     </div>
@@ -629,7 +630,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
 </footer>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function acceptCookies(){document.getElementById('cookie-banner').style.display='none';localStorage.setItem('nk-cookies','accepted');}
 function declineCookies(){document.getElementById('cookie-banner').style.display='none';localStorage.setItem('nk-cookies','declined');}
 window.addEventListener('DOMContentLoaded',function(){if(localStorage.getItem('nk-cookies')){document.getElementById('cookie-banner').style.display='none';}});
@@ -650,14 +651,7 @@ function openModal(role,sector){
 }
 function closeModal(){document.getElementById('cv-modal').classList.remove('open');document.body.style.overflow='';}
 function closeModalOutside(e){if(e.target===document.getElementById('cv-modal'))closeModal();}
-function submitCV(){
-  var fname=document.getElementById('f-fname').value;
-  var email=document.getElementById('f-email').value;
-  var agree=document.getElementById('f-agree').checked;
-  if(!fname||!email||!agree){alert('Please fill in your name, email, and agree to the Privacy Policy.');return;}
-  document.getElementById('modal-success').style.display='block';
-  setTimeout(closeModal,3000);
-}
+function submitCV(){window.open("https://forms.gle/63oH7PYTxr6Nurop9","_blank");closeModal();}
 
 function showPrivacy(){
   var s=document.getElementById('privacy-section');
@@ -668,187 +662,78 @@ function hidePrivacy(){document.getElementById('privacy-section').classList.remo
 
 // 3D GLOBE
 (function(){
-  var canvas = document.getElementById('hero-3d');
-  if(!canvas) return;
-
+  var canvas=document.getElementById('hero-3d');
+  if(!canvas)return;
   function init(){
-    var W = canvas.offsetWidth, H = canvas.offsetHeight;
-    if(W < 10){ setTimeout(init, 200); return; }
-    var dpr = window.devicePixelRatio || 1;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    var ctx = canvas.getContext('2d');
-    ctx.scale(dpr, dpr);
-
-    var cx = W*0.5, cy = H*0.5;
-    var R = Math.min(W,H)*0.36;
-    var t = 0, mouseX = 0, mouseY = 0;
-
-    // Globe surface dots (fibonacci sphere)
-    var DOTS = 600;
-    var gdots = [];
-    var golden = Math.PI*(3-Math.sqrt(5));
-    for(var i=0;i<DOTS;i++){
-      var yy = 1 - (i/DOTS)*2;
-      var rr = Math.sqrt(1-yy*yy);
-      var theta = golden*i;
-      gdots.push([Math.cos(theta)*rr, yy, Math.sin(theta)*rr]);
-    }
-
-    // Rings: [radiusFactor, tiltX, tiltY, color, baseOpacity]
-    var rings = [
-      [1.30, 0.7, 0.2, [232,160,32], 0.6],
-      [1.52, -0.5, 0.8, [120,180,255], 0.35],
-      [1.74, 1.1, -0.3, [232,160,32], 0.25],
-    ];
-
-    // Orbiting dots
-    var odots = [];
-    for(var d=0;d<9;d++){
-      odots.push({ri:d%3, angle:d*Math.PI*2/9, spd:0.45+d*0.08, sz:2.5+(d%3)*1.2, gold:d%3!==1});
-    }
-
-    document.addEventListener('mousemove',function(e){
-      mouseX=(e.clientX/window.innerWidth-0.5)*1.5;
-      mouseY=(e.clientY/window.innerHeight-0.5)*1.0;
-    });
-
+    var W=canvas.offsetWidth,H=canvas.offsetHeight;
+    if(W<10){setTimeout(init,200);return;}
+    var dpr=window.devicePixelRatio||1;
+    canvas.width=W*dpr;canvas.height=H*dpr;
+    var ctx=canvas.getContext('2d');
+    ctx.scale(dpr,dpr);
+    var cx=W*0.5,cy=H*0.5,R=Math.min(W,H)*0.37,t=0,mX=0,mY=0;
+    var N=700,pts=[],golden=Math.PI*(3-Math.sqrt(5));
+    for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),phi=golden*i;pts.push([Math.cos(phi)*r,y,Math.sin(phi)*r]);}
+    var rings=[[1.30,0.7,0.2,232,160,32,0.6],[1.52,-0.4,0.7,100,170,255,0.3],[1.75,1.1,-0.3,232,160,32,0.22]];
+    var odots=[];
+    for(var d=0;d<10;d++)odots.push({ri:d%3,angle:d*Math.PI*2/10,spd:0.4+d*0.07,sz:2.5+(d%3)*1.5,gold:d%3!==1});
+    document.addEventListener('mousemove',function(e){mX=(e.clientX/window.innerWidth-0.5)*1.4;mY=(e.clientY/window.innerHeight-0.5)*0.9;});
     function proj(x,y,z){
-      var ry=t*0.22+mouseX*0.5;
-      var rx=0.25+mouseY*0.3;
-      // rotate Y
-      var x1=x*Math.cos(ry)-z*Math.sin(ry);
-      var z1=x*Math.sin(ry)+z*Math.cos(ry);
-      // rotate X
-      var y2=y*Math.cos(rx)-z1*Math.sin(rx);
-      var z2=y*Math.sin(rx)+z1*Math.cos(rx);
-      var fov=4;
-      var sc=fov/(fov+z2);
-      return {px:cx+x1*R*sc, py:cy-y2*R*sc, sc:sc, z:z2};
+      var ry=t*0.22+mX*0.5,rx=0.28+mY*0.3;
+      var x1=x*Math.cos(ry)-z*Math.sin(ry),z1=x*Math.sin(ry)+z*Math.cos(ry);
+      var y2=y*Math.cos(rx)-z1*Math.sin(rx),z2=y*Math.sin(rx)+z1*Math.cos(rx);
+      var sc=4.2/(4.2+z2);
+      return{px:cx+x1*R*sc,py:cy-y2*R*sc,sc:sc,z:z2};
     }
-
-    function getRingPt(ring,angle){
-      var ri=rings[ring];
-      var rr=ri[0], tx=ri[1], ty=ri[2];
-      var x0=Math.cos(angle)*rr;
-      var y0=Math.sin(angle)*Math.sin(tx);
-      var z0=Math.sin(angle)*Math.cos(tx);
-      var xr=x0*Math.cos(ty)-y0*Math.sin(ty);
-      var yr=x0*Math.sin(ty)+y0*Math.cos(ty);
-      return proj(xr,yr,z0);
+    function rpt(ri,a){
+      var rg=rings[ri],rr=rg[0],tx=rg[1],tz=rg[2];
+      var x0=Math.cos(a)*rr,y0=Math.sin(a)*Math.sin(tx),z0=Math.sin(a)*Math.cos(tx);
+      return proj(x0*Math.cos(tz)-y0*Math.sin(tz),x0*Math.sin(tz)+y0*Math.cos(tz),z0);
     }
-
     function frame(){
-      ctx.clearRect(0,0,W,H);
-      t+=0.007;
-
-      // Ambient glow
-      var g=ctx.createRadialGradient(cx,cy,R*0.2,cx,cy,R*1.5);
-      g.addColorStop(0,'rgba(232,160,32,0.07)');
-      g.addColorStop(0.5,'rgba(26,58,110,0.04)');
-      g.addColorStop(1,'rgba(0,0,0,0)');
-      ctx.beginPath(); ctx.arc(cx,cy,R*1.5,0,Math.PI*2);
-      ctx.fillStyle=g; ctx.fill();
-
-      // Draw rings as dotted circles
-      rings.forEach(function(ri,idx){
-        var col=ri[3], bo=ri[4];
-        for(var i=0;i<90;i++){
-          var a=i*Math.PI*2/90;
-          var p=getRingPt(idx,a);
-          var depth=(p.z+1)/2;
-          ctx.beginPath();
-          ctx.arc(p.px,p.py,1.4*p.sc,0,Math.PI*2);
-          ctx.fillStyle='rgba('+col[0]+','+col[1]+','+col[2]+','+(bo*depth)+')';
-          ctx.fill();
-        }
+      ctx.clearRect(0,0,W,H);t+=0.007;
+      var g=ctx.createRadialGradient(cx,cy,R*0.1,cx,cy,R*1.6);
+      g.addColorStop(0,'rgba(232,160,32,0.08)');g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.beginPath();ctx.arc(cx,cy,R*1.6,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+      rings.forEach(function(rg,ri){
+        for(var i=0;i<90;i++){var p=rpt(ri,i*Math.PI*2/90),d=(p.z+1)/2;
+          ctx.beginPath();ctx.arc(p.px,p.py,1.3*p.sc,0,Math.PI*2);
+          ctx.fillStyle='rgba('+rg[3]+','+rg[4]+','+rg[5]+','+(rg[6]*d)+')';ctx.fill();}
       });
-
-      // Draw globe dots
-      gdots.forEach(function(d){
+      pts.forEach(function(d){
         var p=proj(d[0],d[1],d[2]);
-        var depth=(p.z+1)/2;
-        if(p.z>-0.3){
-          var sz=Math.max(0.4,1.6*p.sc);
-          ctx.beginPath();
-          ctx.arc(p.px,p.py,sz,0,Math.PI*2);
-          var alpha=p.z>0?(0.2+depth*0.7):(depth*0.08);
-          ctx.fillStyle='rgba(232,160,32,'+alpha+')';
-          ctx.fill();
-        }
+        if(p.z>-0.2){var depth=(p.z+1)/2,alpha=p.z>0?(0.15+depth*0.75):(depth*0.06);
+          ctx.beginPath();ctx.arc(p.px,p.py,Math.max(0.4,1.7*p.sc),0,Math.PI*2);
+          ctx.fillStyle='rgba(232,160,32,'+alpha+')';ctx.fill();}
       });
-
-      // Equator line (front half only)
       var prev=null;
-      for(var i=0;i<=80;i++){
-        var a=i*Math.PI*2/80;
-        var p=proj(Math.cos(a),0,Math.sin(a));
-        if(p.z>0){
-          if(prev && Math.abs(p.px-prev.px)<R*0.3){
-            ctx.beginPath();
-            ctx.moveTo(prev.px,prev.py);
-            ctx.lineTo(p.px,p.py);
-            ctx.strokeStyle='rgba(232,160,32,0.18)';
-            ctx.lineWidth=0.8;
-            ctx.stroke();
-          }
-          prev=p;
-        } else { prev=null; }
-      }
-
-      // Meridian
+      for(var i=0;i<=80;i++){var a=i*Math.PI*2/80,p=proj(Math.cos(a),0,Math.sin(a));
+        if(p.z>0){if(prev){ctx.beginPath();ctx.moveTo(prev.px,prev.py);ctx.lineTo(p.px,p.py);ctx.strokeStyle='rgba(232,160,32,0.2)';ctx.lineWidth=0.8;ctx.stroke();}prev=p;}else{prev=null;}}
       prev=null;
-      for(var i=0;i<=80;i++){
-        var a=i*Math.PI*2/80;
-        var p=proj(0,Math.cos(a),Math.sin(a));
-        if(p.z>0){
-          if(prev && Math.abs(p.py-prev.py)<R*0.3){
-            ctx.beginPath();
-            ctx.moveTo(prev.px,prev.py);
-            ctx.lineTo(p.px,p.py);
-            ctx.strokeStyle='rgba(232,160,32,0.12)';
-            ctx.lineWidth=0.6;
-            ctx.stroke();
-          }
-          prev=p;
-        } else { prev=null; }
-      }
-
-      // Orbiting dots with glow
+      for(var i=0;i<=80;i++){var a=i*Math.PI*2/80,p=proj(0,Math.cos(a),Math.sin(a));
+        if(p.z>0){if(prev){ctx.beginPath();ctx.moveTo(prev.px,prev.py);ctx.lineTo(p.px,p.py);ctx.strokeStyle='rgba(232,160,32,0.13)';ctx.lineWidth=0.6;ctx.stroke();}prev=p;}else{prev=null;}}
       odots.forEach(function(od){
-        var p=getRingPt(od.ri, od.angle+t*od.spd);
-        var depth=(p.z+1)/2;
-        var s=od.sz*p.sc;
-        var col=od.gold?'232,160,32':'160,200,255';
+        var p=rpt(od.ri,od.angle+t*od.spd),depth=(p.z+1)/2,s=od.sz*p.sc;
+        var col=od.gold?'232,160,32':'150,200,255';
         var gd=ctx.createRadialGradient(p.px,p.py,0,p.px,p.py,s*4);
-        gd.addColorStop(0,'rgba('+col+','+(0.6*depth)+')');
-        gd.addColorStop(1,'rgba('+col+',0)');
-        ctx.beginPath(); ctx.arc(p.px,p.py,s*4,0,Math.PI*2);
-        ctx.fillStyle=gd; ctx.fill();
-        ctx.beginPath(); ctx.arc(p.px,p.py,Math.max(1,s),0,Math.PI*2);
-        ctx.fillStyle='rgba('+col+','+(0.85*depth)+')';
-        ctx.fill();
+        gd.addColorStop(0,'rgba('+col+','+(0.65*depth)+')');gd.addColorStop(1,'rgba('+col+',0)');
+        ctx.beginPath();ctx.arc(p.px,p.py,s*4,0,Math.PI*2);ctx.fillStyle=gd;ctx.fill();
+        ctx.beginPath();ctx.arc(p.px,p.py,Math.max(1,s),0,Math.PI*2);
+        ctx.fillStyle='rgba('+col+','+(0.9*depth)+')';ctx.fill();
       });
-
-      // Outer pulse ring
-      var pr=R*(1.04+0.03*Math.sin(t*1.8));
-      ctx.beginPath(); ctx.arc(cx,cy,pr,0,Math.PI*2);
-      ctx.strokeStyle='rgba(232,160,32,'+(0.07+0.04*Math.sin(t*1.8))+')';
-      ctx.lineWidth=1.5; ctx.stroke();
-
+      var pr=R*(1.05+0.03*Math.sin(t*1.8));
+      ctx.beginPath();ctx.arc(cx,cy,pr,0,Math.PI*2);
+      ctx.strokeStyle='rgba(232,160,32,'+(0.08+0.05*Math.sin(t*1.8))+')';ctx.lineWidth=1.5;ctx.stroke();
       requestAnimationFrame(frame);
     }
     frame();
-
     window.addEventListener('resize',function(){
-      W=canvas.offsetWidth; H=canvas.offsetHeight;
-      canvas.width=W*dpr; canvas.height=H*dpr;
-      ctx.scale(dpr,dpr);
-      cx=W*0.5; cy=H*0.5; R=Math.min(W,H)*0.36;
+      W=canvas.offsetWidth;H=canvas.offsetHeight;
+      canvas.width=W*dpr;canvas.height=H*dpr;ctx.scale(dpr,dpr);
+      cx=W*0.5;cy=H*0.5;R=Math.min(W,H)*0.37;
     });
   }
-
-  setTimeout(init,100);
+  setTimeout(init,150);
 })();
 </script>
 </body>
