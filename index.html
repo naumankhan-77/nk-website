@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NK Recruitment – Your Future, Our Mission</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230d2545'/%3E%3Crect x='4' y='4' width='56' height='56' rx='8' fill='%23e8a020' opacity='0.15'/%3E%3Crect x='2' y='2' width='60' height='60' rx='9' fill='none' stroke='%23e8a020' stroke-width='2.5'/%3E%3Ctext x='8' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23e8a020'%3EN%3C/text%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230d2545'/%3E%3Crect x='2' y='2' width='60' height='60' rx='9' fill='none' stroke='%23e8a020' stroke-width='2.5'/%3E%3Ctext x='8' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23e8a020'%3EN%3C/text%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--navy:#0d2545;--navy-light:#1a3a6e;--amber:#e8a020;--amber-light:#f5c55a;--white:#ffffff;--off-white:#f7f6f2;--muted:#6b7280;--dark:#1a1a2e;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
+
+/* COOKIE BANNER */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#08172e;border-top:2px solid var(--amber);padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+#cookie-banner p{font-size:0.85rem;color:rgba(255,255,255,0.8);max-width:750px;line-height:1.6;}
+#cookie-banner a{color:var(--amber);text-decoration:underline;cursor:pointer;}
+.cookie-btns{display:flex;gap:0.75rem;flex-shrink:0;}
+.cookie-accept{background:var(--amber);color:var(--navy);border:none;padding:0.5rem 1.25rem;border-radius:4px;font-size:0.85rem;font-weight:500;cursor:pointer;}
+.cookie-decline{background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1.25rem;border-radius:4px;font-size:0.85rem;cursor:pointer;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,37,69,0.97);backdrop-filter:blur(8px);padding:0.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--amber);}
+.nav-cta{background:var(--amber);color:var(--navy);padding:0.5rem 1.25rem;border-radius:4px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--amber-light);}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(232,160,32,0.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+#hero-3d{position:absolute;top:0;right:0;width:55%;height:100%;pointer-events:none;z-index:0;opacity:0.85;}
+.hero-content{position:relative;z-index:1;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);color:var(--amber);padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:2rem;width:fit-content;}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6.5vw,5rem);font-weight:300;color:var(--white);line-height:1.05;max-width:750px;margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--amber);}
+.hero p{color:rgba(255,255,255,0.65);font-size:1.05rem;max-width:500px;line-height:1.7;margin-bottom:2.5rem;font-weight:300;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{background:var(--amber);color:var(--navy);padding:0.85rem 2rem;border-radius:4px;font-size:0.95rem;font-weight:500;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;display:inline-block;font-family:'DM Sans',sans-serif;}
+.btn-primary:hover{background:var(--amber-light);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.25);padding:0.85rem 2rem;border-radius:4px;font-size:0.95rem;font-weight:400;text-decoration:none;transition:all 0.2s;cursor:pointer;display:inline-block;}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.6);}
+.hero-stats{display:flex;gap:3rem;margin-top:4rem;flex-wrap:wrap;}
+.stat-num{font-family:'Fraunces',serif;font-size:2.2rem;color:var(--white);font-weight:300;}
+.stat-num span{color:var(--amber);}
+.stat-label{font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;}
+
+/* SHARED */
+.section-label{font-size:0.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:0.12em;font-weight:500;margin-bottom:0.85rem;}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:300;color:var(--navy);line-height:1.15;margin-bottom:3rem;max-width:520px;}
+.section-title em{font-style:italic;color:var(--amber);}
+
+/* ABOUT */
+.about-strip{padding:5rem 2.5rem;background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-strip p{font-size:0.98rem;color:var(--muted);line-height:1.8;margin-bottom:1rem;}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem;}
+.feat{padding:1.25rem;background:var(--off-white);border-radius:8px;border-left:3px solid var(--amber);}
+.feat-title{font-size:0.9rem;font-weight:500;color:var(--navy);margin-bottom:0.3rem;}
+.feat-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+
+/* SECTORS */
+.sectors{padding:6rem 2.5rem;background:var(--off-white);}
+.sectors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5px;background:rgba(13,37,69,0.1);}
+.sector-card{background:var(--white);padding:2.5rem 2rem;transition:all 0.25s;}
+.sector-card:hover{background:var(--navy);}
+.sector-card:hover .sector-name{color:var(--white);}
+.sector-card:hover .sector-desc{color:rgba(255,255,255,0.6);}
+.sector-card:hover .sector-icon{background:rgba(232,160,32,0.2);}
+.sector-icon{width:46px;height:46px;border-radius:8px;background:rgba(232,160,32,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
+.sector-icon svg{width:20px;height:20px;stroke:var(--amber);fill:none;stroke-width:1.5;}
+.sector-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:0.6rem;}
+.sector-desc{font-size:0.85rem;color:var(--muted);line-height:1.6;}
+
+/* POSITIONS */
+.positions{padding:6rem 2.5rem;background:var(--white);}
+.positions-tabs{display:flex;gap:0.5rem;margin-bottom:2.5rem;flex-wrap:wrap;}
+.tab-btn{padding:0.5rem 1.25rem;border-radius:100px;border:1px solid rgba(13,37,69,0.2);background:transparent;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.tab-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.positions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;}
+.position-card{border:1px solid rgba(13,37,69,0.12);border-radius:10px;padding:1.5rem;transition:all 0.2s;}
+.position-card:hover{border-color:var(--amber);box-shadow:0 4px 20px rgba(232,160,32,0.1);}
+.pos-sector{font-size:0.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:0.5rem;}
+.pos-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:400;color:var(--navy);margin-bottom:0.4rem;}
+.pos-type{font-size:0.8rem;color:var(--muted);margin-bottom:1rem;}
+.pos-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.pos-tag{font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:100px;background:var(--off-white);color:var(--muted);}
+.apply-btn{width:100%;padding:0.65rem;background:var(--navy);color:var(--white);border:none;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.apply-btn:hover{background:var(--navy-light);}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:500;align-items:center;justify-content:center;padding:1rem;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--white);border-radius:12px;padding:2.5rem;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;position:relative;}
+.modal h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;color:var(--navy);margin-bottom:0.4rem;}
+.modal-role{font-size:0.85rem;color:var(--amber);margin-bottom:1.5rem;font-weight:500;}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted);line-height:1;}
+.form-group{margin-bottom:1rem;}
+.form-group label{display:block;font-size:0.82rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem 1rem;border:1px solid rgba(13,37,69,0.15);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.9rem;background:var(--white);color:var(--dark);outline:none;transition:border 0.2s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--amber);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-notice{font-size:0.75rem;color:var(--muted);line-height:1.5;margin-bottom:1rem;padding:0.75rem;background:var(--off-white);border-radius:6px;}
+.form-notice a{color:var(--amber);cursor:pointer;}
+.form-check{display:flex;align-items:flex-start;gap:0.5rem;margin-bottom:1.25rem;}
+.form-check input{margin-top:3px;accent-color:var(--amber);}
+.form-check label{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+.form-check a{color:var(--amber);cursor:pointer;}
+
+/* HOW */
+.how{padding:6rem 2.5rem;background:var(--off-white);}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;margin-top:3rem;}
+.step-num{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:rgba(13,37,69,0.08);line-height:1;margin-bottom:0.75rem;}
+.step-title{font-size:0.95rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;}
+.step-desc{font-size:0.82rem;color:var(--muted);line-height:1.6;}
+
+/* IMMIGRATION */
+.immigration{padding:6rem 2.5rem;background:var(--navy);position:relative;overflow:hidden;}
+.immigration::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(232,160,32,0.08) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+.immigration .section-label{color:var(--amber);}
+.immigration .section-title{color:var(--white);}
+.immig-disclaimer{background:rgba(232,160,32,0.1);border:1px solid rgba(232,160,32,0.3);border-radius:8px;padding:1rem 1.25rem;margin-bottom:2.5rem;font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.6;}
+.immig-disclaimer strong{color:var(--amber);}
+.immig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:3rem;}
+.immig-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1.75rem;transition:all 0.2s;}
+.immig-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(232,160,32,0.4);}
+.immig-icon{width:40px;height:40px;background:rgba(232,160,32,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+.immig-icon svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:1.5;}
+.immig-card h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:400;color:var(--white);margin-bottom:0.5rem;}
+.immig-card p{font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6;}
+.immig-booking{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.immig-booking h4{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:300;color:var(--white);}
+.immig-booking h4 em{font-style:italic;color:var(--amber);}
+.immig-booking p{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;}
+.immig-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.btn-amber{background:var(--amber);color:var(--navy);padding:0.75rem 1.5rem;border-radius:4px;font-size:0.9rem;font-weight:500;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-amber:hover{background:var(--amber-light);}
+.btn-outline-white{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.3);padding:0.75rem 1.5rem;border-radius:4px;font-size:0.9rem;text-decoration:none;transition:all 0.2s;}
+.btn-outline-white:hover{border-color:rgba(255,255,255,0.7);}
+
+/* CTA */
+.cta-strip{background:var(--amber);padding:4.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;}
+.cta-strip h2{font-family:'Fraunces',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--navy);max-width:500px;line-height:1.2;}
+.cta-strip h2 em{font-style:italic;}
+.btn-navy{background:var(--navy);color:var(--white);padding:0.85rem 2rem;border-radius:4px;font-size:0.95rem;font-weight:500;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-navy:hover{background:var(--navy-light);}
+
+/* CONTACT */
+.contact{padding:6rem 2.5rem;background:var(--off-white);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;margin-top:2.5rem;}
+.contact-info p{font-size:0.95rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;}
+.contact-detail{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.1rem;}
+.contact-detail svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:2px;}
+.contact-detail div span{display:block;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.15rem;}
+.contact-detail div a,.contact-detail div p{font-size:0.9rem;color:var(--dark);text-decoration:none;}
+.contact-detail div a:hover{color:var(--amber);}
+.contact-form-box{background:var(--white);border-radius:12px;padding:2rem;border:1px solid rgba(13,37,69,0.08);}
+.contact-form-box h4{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;color:var(--navy);margin-bottom:1.5rem;}
+.whatsapp-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:var(--white);padding:0.75rem 1.25rem;border-radius:6px;text-decoration:none;font-size:0.88rem;font-weight:500;margin-top:1.5rem;transition:opacity 0.2s;}
+.whatsapp-btn:hover{opacity:0.9;}
+
+/* PRIVACY */
+.privacy{padding:6rem 2.5rem;background:var(--white);display:none;}
+.privacy.open{display:block;}
+.privacy-content{max-width:780px;}
+.privacy-content h3{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;color:var(--navy);margin:2rem 0 0.75rem;}
+.privacy-content p,.privacy-content li{font-size:0.9rem;color:var(--muted);line-height:1.8;}
+.privacy-content ul{padding-left:1.5rem;margin-top:0.5rem;}
+.privacy-content table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem;}
+.privacy-content th{background:var(--off-white);padding:0.6rem 0.75rem;text-align:left;color:var(--navy);font-weight:500;}
+.privacy-content td{padding:0.6rem 0.75rem;border-bottom:1px solid rgba(13,37,69,0.08);color:var(--muted);}
+
+/* FOOTER */
+footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;}
+.footer-desc{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-top:1rem;}
+.footer-col h5{font-size:0.72rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:0.5rem;}
+.footer-col ul li a{font-size:0.83rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--amber);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,0.25);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:0.78rem;color:rgba(255,255,255,0.3);text-decoration:none;cursor:pointer;}
+.footer-bottom-links a:hover{color:var(--amber);}
+
+@media(max-width:900px){.about-strip{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:680px){nav{padding:0.75rem 1.25rem;}.nav-links{display:none;}.hero{padding:7rem 1.25rem 5rem;}.sectors,.positions,.how,.contact,.immigration{padding:4rem 1.25rem;}.about-strip,.cta-strip{padding:3.5rem 1.25rem;}.about-features{grid-template-columns:1fr;}.form-row-2{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;}footer{padding:2.5rem 1.25rem 1.25rem;}#cookie-banner{padding:1rem 1.25rem;}}
+</style>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <p>We use cookies to improve your experience. By continuing, you agree to our use of cookies. CVs are stored securely for up to <strong>180 days</strong> in line with GDPR. <a onclick="showPrivacy()">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cookie-decline" onclick="declineCookies()">Essential Only</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 180 56" height="46" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="4" width="44" height="44" rx="7" fill="none" stroke="#e8a020" stroke-width="1.5"/>
+      <rect x="6" y="8" width="36" height="36" rx="5" fill="#e8a020" opacity="0.1"/>
+      <text x="9" y="36" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#e8a020">N</text>
+      <text x="24" y="36" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#ffffff">K</text>
+      <text x="54" y="25" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="#ffffff" letter-spacing="2">RECRUITMENT</text>
+      <line x1="54" y1="31" x2="176" y2="31" stroke="#e8a020" stroke-width="0.5" opacity="0.5"/>
+      <text x="54" y="43" font-family="Georgia,serif" font-size="9" fill="#e8a020" letter-spacing="1" font-style="italic">Your Future · Our Mission</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#sectors">Services</a></li>
+    <li><a href="#positions">Jobs</a></li>
+    <li><a href="#immigration">Immigration</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#positions" class="nav-cta">Submit CV</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="hero-3d"></canvas>
+  <div class="hero-content">
+    <div class="hero-tag">Ireland's recruitment & immigration consultants</div>
+    <h1>Your global career <em>starts here.</em></h1>
+    <p>NK Recruitment connects talented professionals with premier opportunities across Ireland, the UK, and Europe. Expert recruiters. Personalised service. Real results.</p>
+    <div class="hero-btns">
+      <a href="#positions" class="btn-primary">View Open Positions</a>
+      <a href="#about" class="btn-ghost">How we work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">2<span>+</span></div><div class="stat-label">Years placing talent</div></div>
+      <div class="stat"><div class="stat-num">4<span>+</span></div><div class="stat-label">Sectors covered</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip" id="about">
+  <div>
+    <div class="section-label">Our company</div>
+    <h2 class="section-title">Obtaining the best career opportunities & advice.</h2>
+    <p>NK Recruitment is a leading recruitment agency specialising in connecting talented professionals with premier job opportunities worldwide. Our expert consultants provide personalised guidance for your career journey — from initial consultation right through to placement and beyond.</p>
+    <p>Based at 19 Watergate Street, Navan, Co. Meath, we serve clients across Ireland, the UK, and Europe, with a global reach spanning Pakistan, South Asia, Eastern Europe, and the UAE.</p>
+    <a href="#contact" class="btn-primary" style="margin-top:1.5rem;">Book a free consultation</a>
+  </div>
+  <div>
+    <div class="about-features">
+      <div class="feat"><div class="feat-title">Expert Recruiters</div><div class="feat-desc">Industry specialists with deep market knowledge across multiple sectors.</div></div>
+      <div class="feat"><div class="feat-title">Global Network</div><div class="feat-desc">Access to opportunities across Ireland, UK, Europe and beyond.</div></div>
+      <div class="feat"><div class="feat-title">Personalised Service</div><div class="feat-desc">Tailored approach for every candidate and employer we work with.</div></div>
+      <div class="feat"><div class="feat-title">Career Coaching</div><div class="feat-desc">CV guidance, interview preparation and professional development support.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="sectors" id="sectors">
+  <div class="section-label">What we do</div>
+  <h2 class="section-title">Recruiting across sectors that matter.</h2>
+  <div class="sectors-grid">
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="sector-name">Permanent Staffing</div>
+      <div class="sector-desc">Full-time placement matching qualified candidates with permanent positions across all industries.</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="sector-name">Construction & Trades</div>
+      <div class="sector-desc">Skilled tradespeople, site managers, general operatives and project leads placed with top contractors.</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="sector-name">Healthcare</div>
+      <div class="sector-desc">Nurses, healthcare assistants, and carers placed in hospitals, care homes and community settings.</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+      <div class="sector-name">Contract Staffing</div>
+      <div class="sector-desc">Flexible staffing solutions for project-based needs, temporary cover and seasonal demands.</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="sector-name">Warehouse & Logistics</div>
+      <div class="sector-desc">Warehouse operatives, forklift drivers and logistics staff placed with leading distribution companies.</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div class="sector-name">Academic Placement</div>
+      <div class="sector-desc">Connecting students and institutions. Study abroad guidance, student recruitment and scholarship support.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN POSITIONS -->
+<section class="positions" id="positions">
+  <div class="section-label">Now hiring</div>
+  <h2 class="section-title">Open positions — apply <em>today.</em></h2>
+  <div class="positions-tabs">
+    <button class="tab-btn active" onclick="filterJobs('all',this)">All Roles</button>
+    <button class="tab-btn" onclick="filterJobs('construction',this)">Construction & Trades</button>
+    <button class="tab-btn" onclick="filterJobs('healthcare',this)">Healthcare</button>
+    <button class="tab-btn" onclick="filterJobs('warehouse',this)">Warehouse & Logistics</button>
+    <button class="tab-btn" onclick="filterJobs('general',this)">General</button>
+  </div>
+  <div class="positions-grid" id="positions-grid">
+    <div class="position-card" data-sector="construction">
+      <div class="pos-sector">Construction & Trades</div>
+      <div class="pos-title">General Operative</div>
+      <div class="pos-type">Full-time · Dublin & Leinster</div>
+      <div class="pos-tags"><span class="pos-tag">Entry level</span><span class="pos-tag">Immediate start</span><span class="pos-tag">CSCS card preferred</span></div>
+      <button class="apply-btn" onclick="openModal('General Operative','Construction & Trades')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="construction">
+      <div class="pos-sector">Construction & Trades</div>
+      <div class="pos-title">Electrician</div>
+      <div class="pos-type">Full-time / Contract · Nationwide</div>
+      <div class="pos-tags"><span class="pos-tag">Safe Pass required</span><span class="pos-tag">RECI registered</span><span class="pos-tag">3+ yrs exp</span></div>
+      <button class="apply-btn" onclick="openModal('Electrician','Construction & Trades')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="construction">
+      <div class="pos-sector">Construction & Trades</div>
+      <div class="pos-title">Plumber / Pipefitter</div>
+      <div class="pos-type">Full-time / Contract · Nationwide</div>
+      <div class="pos-tags"><span class="pos-tag">Trade cert required</span><span class="pos-tag">Domestic & commercial</span></div>
+      <button class="apply-btn" onclick="openModal('Plumber / Pipefitter','Construction & Trades')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="construction">
+      <div class="pos-sector">Construction & Trades</div>
+      <div class="pos-title">Site Manager / Foreman</div>
+      <div class="pos-type">Full-time · Dublin & surrounding</div>
+      <div class="pos-tags"><span class="pos-tag">5+ yrs exp</span><span class="pos-tag">Safe Pass</span><span class="pos-tag">Management exp</span></div>
+      <button class="apply-btn" onclick="openModal('Site Manager / Foreman','Construction & Trades')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="healthcare">
+      <div class="pos-sector">Healthcare</div>
+      <div class="pos-title">Healthcare Assistant (HCA)</div>
+      <div class="pos-type">Full-time / Part-time · Nationwide</div>
+      <div class="pos-tags"><span class="pos-tag">QQI Level 5 preferred</span><span class="pos-tag">Immediate start</span></div>
+      <button class="apply-btn" onclick="openModal('Healthcare Assistant (HCA)','Healthcare')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="healthcare">
+      <div class="pos-sector">Healthcare</div>
+      <div class="pos-title">Nurse (RGN / RPN)</div>
+      <div class="pos-type">Full-time / Agency · Nationwide</div>
+      <div class="pos-tags"><span class="pos-tag">NMBI registration required</span><span class="pos-tag">Hospital & care home</span></div>
+      <button class="apply-btn" onclick="openModal('Nurse (RGN / RPN)','Healthcare')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="warehouse">
+      <div class="pos-sector">Warehouse & Logistics</div>
+      <div class="pos-title">Warehouse Operative</div>
+      <div class="pos-type">Full-time / Temporary · Dublin & Meath</div>
+      <div class="pos-tags"><span class="pos-tag">Immediate start</span><span class="pos-tag">Picking & packing</span><span class="pos-tag">Day & night shifts</span></div>
+      <button class="apply-btn" onclick="openModal('Warehouse Operative','Warehouse & Logistics')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="warehouse">
+      <div class="pos-sector">Warehouse & Logistics</div>
+      <div class="pos-title">Forklift Driver / Reach Truck</div>
+      <div class="pos-type">Full-time · Dublin & Meath</div>
+      <div class="pos-tags"><span class="pos-tag">Counterbalance licence</span><span class="pos-tag">Reach truck exp</span></div>
+      <button class="apply-btn" onclick="openModal('Forklift Driver / Reach Truck','Warehouse & Logistics')">Submit CV for this role</button>
+    </div>
+    <div class="position-card" data-sector="general">
+      <div class="pos-sector">General</div>
+      <div class="pos-title">General Operations Staff</div>
+      <div class="pos-type">Full-time / Part-time · Flexible</div>
+      <div class="pos-tags"><span class="pos-tag">All levels welcome</span><span class="pos-tag">Various industries</span></div>
+      <button class="apply-btn" onclick="openModal('General Operations Staff','General')">Submit CV for this role</button>
+    </div>
+  </div>
+</section>
+
+<!-- CV MODAL -->
+<div class="modal-overlay" id="cv-modal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <h3>Apply for this role</h3>
+    <div class="modal-role" id="modal-role-label"></div>
+    <div class="form-notice">&#128274; Your CV is stored securely for up to <strong>180 days</strong> under GDPR. Request deletion anytime at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95fbf4e0f8f4fbfefdf4fbd5fbfee7f0f6e7e0fce1f8f0fbe1bbf6faf8">[email&#160;protected]</a>.</div>
+    <div class="form-row-2">
+      <div class="form-group"><label>First Name *</label><input type="text" id="f-fname" placeholder="John"></div>
+      <div class="form-group"><label>Last Name *</label><input type="text" id="f-lname" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label>Email Address *</label><input type="email" id="f-email" placeholder="john@example.com"></div>
+    <div class="form-group"><label>Phone Number *</label><input type="tel" id="f-phone" placeholder="+353 ..."></div>
+    <div class="form-row-2">
+      <div class="form-group"><label>Nationality</label><input type="text" id="f-nat" placeholder="e.g. Irish, Pakistani"></div>
+      <div class="form-group"><label>Current Location</label><input type="text" id="f-loc" placeholder="e.g. Dublin, Ireland"></div>
+    </div>
+    <div class="form-group"><label>Years of Experience</label>
+      <select id="f-exp"><option value="">Select...</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>5–10 years</option><option>10+ years</option></select>
+    </div>
+    <div class="form-group"><label>Right to work in Ireland / EU?</label>
+      <select id="f-rtr"><option value="">Select...</option><option>Yes – EU / Irish citizen</option><option>Yes – valid work permit / stamp</option><option>No – I need visa / permit support</option><option>Not sure</option></select>
+    </div>
+    <div class="form-group"><label>Upload CV (PDF or Word, max 5MB)</label><input type="file" id="f-cv" accept=".pdf,.doc,.docx"></div>
+    <div class="form-group"><label>Additional Information</label><textarea id="f-notes" placeholder="Tell us about your experience, availability, or any questions..."></textarea></div>
+    <div class="form-check">
+      <input type="checkbox" id="f-agree">
+      <label for="f-agree">I agree to the <a onclick="showPrivacy()">Privacy Policy</a> and consent to NK Recruitment storing my data for up to 180 days for recruitment purposes.</label>
+    </div>
+    <button class="btn-primary" style="width:100%;" onclick="submitCV()">Submit Application</button>
+    <div id="modal-success" style="display:none;margin-top:1rem;padding:0.75rem;background:#f0fdf4;border-radius:6px;font-size:0.85rem;color:#166534;text-align:center;">&#10003; Application received! We'll be in touch within 5–7 business days.</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-label">Our process</div>
+  <h2 class="section-title">How NK Recruitment works.</h2>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">01</div><div class="step-title">Submit your profile</div><div class="step-desc">Register and upload your CV. We'll add your profile to our active candidate database immediately.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title">Initial consultation</div><div class="step-desc">Meet one of our recruitment specialists to discuss your career goals, experience and requirements.</div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title">Job matching</div><div class="step-desc">We identify the best-fit opportunities from our employer network and present them to you directly.</div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-title">Interview preparation</div><div class="step-desc">Comprehensive coaching, company research and mock interviews to maximise your success.</div></div>
+    <div class="step"><div class="step-num">05</div><div class="step-title">Job placement</div><div class="step-desc">We assist with offer negotiation and ensure a smooth onboarding process with your new employer.</div></div>
+    <div class="step"><div class="step-num">06</div><div class="step-title">Ongoing support</div><div class="step-desc">We stay in touch after placement to ensure your long-term career success and satisfaction.</div></div>
+  </div>
+</section>
+
+<!-- IMMIGRATION -->
+<section class="immigration" id="immigration">
+  <div class="section-label">Immigration services</div>
+  <h2 class="section-title">Navigate your immigration <em>with confidence.</em></h2>
+  <div class="immig-disclaimer">
+    <strong>Important notice:</strong> NK Recruitment provides immigration guidance, information and referrals only. We are not a licensed legal firm or solicitor. For complex legal matters, we refer clients to qualified immigration solicitors. All services are quoted on a case-by-case basis. First 30 minutes of consultation is free.
+  </div>
+  <div class="immig-grid">
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M7 4v4"/></svg></div>
+      <h4>Visa Applications</h4>
+      <p>Guidance on Irish, UK and European visa applications — work visas, student visas, tourist and long-stay visas.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M16 19h6m-3-3v6"/></svg></div>
+      <h4>Work Permit Support</h4>
+      <p>We guide employers and employees through Critical Skills and General Employment Permit applications for Ireland.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <h4>Student Visas & Study Abroad</h4>
+      <p>Expert guidance for students seeking to study in Ireland, the UK or Europe — including university placement and scholarships.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h4>Family Reunification</h4>
+      <p>Assistance with dependent and family visa applications to help your loved ones join you in Ireland or the UK.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h4>IRP Registration</h4>
+      <p>We help you prepare for Irish Residency Permit (IRP) registration, including all required documentation and booking.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <h4>Immigration Stamp Guidance</h4>
+      <p>Clear guidance on Stamp 1, 1G, 2, 3, and 4 — eligibility, rights and how to transition between stamp conditions.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <h4>Document Authentication</h4>
+      <p>Support with document translation, apostille certification, and Garda vetting requirements for immigration purposes.</p>
+    </div>
+    <div class="immig-card">
+      <div class="immig-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <h4>Employer Sponsorship</h4>
+      <p>We assist employers in sponsoring international workers and navigating CSEP and GEP permit requirements in Ireland.</p>
+    </div>
+  </div>
+  <div class="immig-booking">
+    <div>
+      <h4>Book your <em>free 30-minute</em> immigration consultation.</h4>
+      <p>Speak to our team via WhatsApp, email or online form. Further services are quoted individually after your free session.</p>
+    </div>
+    <div class="immig-btns">
+      <a href="https://wa.me/353833458472" target="_blank" class="btn-amber">WhatsApp us</a>
+      <a href="#contact" class="btn-outline-white">Email enquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h2>Ready to find your next <em>great opportunity?</em></h2>
+  <a href="#positions" class="btn-navy">Browse open positions</a>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Get in touch</div>
+  <h2 class="section-title">Let's talk.</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>Whether you're a business looking for talent, a candidate seeking your next role, or need immigration guidance — our team is ready to help.</p>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><span>Address</span><p>19 Watergate Street, Navan, Co. Meath, Ireland</p></div>
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><span>Phone</span><a href="tel:+353833458472">+353 83 345 8472</a><br><a href="tel:+923335238629" style="font-size:0.82rem;color:var(--muted);">Pak: +92 333 523 8629</a></div>
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div><span>Email</span><a href="/cdn-cgi/l/email-protection#9af4fbeff7fbf4f1f2fbf4daf4f1e8fff9e8eff3eef7fff4eeb4f9f5f7"><span class="__cf_email__" data-cfemail="7917180c141817121118173917120b1c1a0b0c100d141c170d571a1614">[email&#160;protected]</span></a></div>
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><span>Working Hours</span><p>Monday – Friday: 9:00 AM – 5:00 PM</p></div>
+      </div>
+      <a href="https://wa.me/353833458472" target="_blank" class="whatsapp-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+    <div class="contact-form-box">
+      <h4>Send us a message</h4>
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+      <div class="form-group"><label>Subject</label>
+        <select><option value="">Select a subject...</option><option>Job enquiry</option><option>Immigration consultation</option><option>Employer / hiring enquiry</option><option>Student placement</option><option>General enquiry</option></select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
+      <button class="btn-primary" style="width:100%;">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section class="privacy" id="privacy-section">
+  <div class="privacy-content">
+    <div class="section-label">Legal</div>
+    <h2 class="section-title">Privacy Policy</h2>
+    <p><strong>Last updated: June 2025</strong></p>
+    <h3>1. Who we are</h3>
+    <p>NK Recruitment is a recruitment and immigration consultancy based at 19 Watergate Street, Navan, Co. Meath, Ireland. We are committed to protecting your personal data in line with the General Data Protection Regulation (GDPR) and the Data Protection Acts 1988–2018.</p>
+    <h3>2. What data we collect</h3>
+    <ul><li>Name, email address, phone number and location</li><li>CV / résumé and employment history</li><li>Nationality and right-to-work information</li><li>Immigration status and document details (where applicable)</li><li>Website usage data via cookies (analytics only)</li></ul>
+    <h3>3. How long we keep your data</h3>
+    <table>
+      <tr><th>Data type</th><th>Retention period</th></tr>
+      <tr><td>CV and application data</td><td><strong>180 days</strong> from submission, then securely deleted</td></tr>
+      <tr><td>Contact / enquiry messages</td><td>12 months</td></tr>
+      <tr><td>Immigration consultation notes</td><td>12 months or as required by law</td></tr>
+      <tr><td>Cookie / analytics data</td><td>13 months</td></tr>
+    </table>
+    <p>Under GDPR, CVs are retained for a maximum of <strong>180 days</strong>. After this, your data is permanently and securely deleted unless you give explicit consent for extended retention or a placement has occurred.</p>
+    <h3>4. How we use your data</h3>
+    <ul><li>To match your profile to relevant job opportunities</li><li>To contact you about roles and career guidance</li><li>To provide immigration guidance and referrals</li><li>To comply with legal obligations</li></ul>
+    <h3>5. Cookies</h3>
+    <p>We use essential cookies (required for site function) and, with your consent, analytics cookies. We do not use advertising or tracking cookies. You may withdraw consent at any time by contacting us.</p>
+    <h3>6. Your rights under GDPR</h3>
+    <ul><li>Right to access your data</li><li>Right to correct inaccurate data</li><li>Right to erasure ("right to be forgotten")</li><li>Right to restrict or object to processing</li><li>Right to data portability</li></ul>
+    <p>To exercise any right, email <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd3dcc8d0dcd3d6d5dcd3fdd3d6cfd8decfc8d4c9d0d8d3c993ded2d0">[email&#160;protected]</a></strong>. We will respond within 30 days.</p>
+    <h3>7. Data sharing</h3>
+    <p>We do not sell your data. We share your CV with prospective employers only with your explicit consent. We may share limited data with immigration solicitor partners where you have requested a referral.</p>
+    <h3>8. Contact & complaints</h3>
+    <p>Data Controller: NK Recruitment, 19 Watergate Street, Navan, Co. Meath, Ireland. Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="640a051109050a0f0c050a240a0f16010716110d1009010a104a070b09">[email&#160;protected]</a>. You may also lodge a complaint with the Data Protection Commission at <strong>dataprotection.ie</strong>.</p>
+    <div style="margin-top:2rem;"><button class="btn-primary" onclick="hidePrivacy()">Close Privacy Policy</button></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <svg viewBox="0 0 180 56" height="46" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="4" width="44" height="44" rx="7" fill="none" stroke="#e8a020" stroke-width="1.5" opacity="0.7"/>
+        <text x="9" y="36" font-family="Georgia,serif" font-size="23" font-weight="700" fill="#e8a020" opacity="0.8">N</text>
+        <text x="24" y="36" font-family="Georgia,serif" font-size="23" font-weight="700" fill="rgba(255,255,255,0.5)">K</text>
+        <text x="54" y="25" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="2">RECRUITMENT</text>
+        <line x1="54" y1="31" x2="176" y2="31" stroke="#e8a020" stroke-width="0.5" opacity="0.3"/>
+        <text x="54" y="43" font-family="Georgia,serif" font-size="9" fill="#e8a020" letter-spacing="1" font-style="italic" opacity="0.6">Your Future · Our Mission</text>
+      </svg>
+      <p class="footer-desc">NK Recruitment is a leading recruitment and immigration consultancy connecting talented professionals with premier opportunities across Ireland, the UK and Europe.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick links</h5>
+      <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#sectors">Our services</a></li>
+        <li><a href="#positions">Job listings</a></li>
+        <li><a href="#immigration">Immigration</a></li>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a onclick="showPrivacy()">Privacy policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Our services</h5>
+      <ul>
+        <li><a href="#sectors">Permanent staffing</a></li>
+        <li><a href="#sectors">Contract staffing</a></li>
+        <li><a href="#sectors">Healthcare</a></li>
+        <li><a href="#sectors">Construction & trades</a></li>
+        <li><a href="#sectors">Warehouse & logistics</a></li>
+        <li><a href="#sectors">Academic placement</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact info</h5>
+      <ul>
+        <li><a href="#">19 Watergate St, Navan, Co. Meath</a></li>
+        <li><a href="tel:+353833458472">Ire: +353 83 345 8472</a></li>
+        <li><a href="tel:+923335238629">Pak: +92 333 523 8629</a></li>
+        <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be5eafee6eae5e0e3eae5cbe5e0f9eee8f9fee2ffe6eee5ffa5e8e4e6">[email&#160;protected]</a></li>
+        <li><a href="#">Mon–Fri: 9:00 AM – 5:00 PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 NK Recruitment. All rights reserved. Navan, Co. Meath, Ireland.</p>
+    <div class="footer-bottom-links">
+      <a onclick="showPrivacy()">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a onclick="showPrivacy()">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function acceptCookies(){document.getElementById('cookie-banner').style.display='none';localStorage.setItem('nk-cookies','accepted');}
+function declineCookies(){document.getElementById('cookie-banner').style.display='none';localStorage.setItem('nk-cookies','declined');}
+window.addEventListener('DOMContentLoaded',function(){if(localStorage.getItem('nk-cookies')){document.getElementById('cookie-ba
