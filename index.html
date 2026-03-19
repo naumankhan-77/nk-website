@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NK Recruitment – Your Future, Our Mission</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230d2545'/%3E%3Crect x='4' y='4' width='56' height='56' rx='8' fill='%23e8a020' opacity='0.15'/%3E%3Crect x='2' y='2' width='60' height='60' rx='9' fill='none' stroke='%23e8a020' stroke-width='2.5'/%3E%3Ctext x='8' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23e8a020'%3EN%3C/text%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230d2545'/%3E%3Crect x='2' y='2' width='60' height='60' rx='9' fill='none' stroke='%23e8a020' stroke-width='2.5'/%3E%3Ctext x='8' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23e8a020'%3EN%3C/text%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -381,7 +383,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
     <button class="modal-close" onclick="closeModal()">&#x2715;</button>
     <h3>Apply for this role</h3>
     <div class="modal-role" id="modal-role-label"></div>
-    <div class="form-notice">&#128274; Your CV is stored securely for up to <strong>180 days</strong> under GDPR. Request deletion anytime at <a onclick="void(0)">naumankhan@nkrecruitment.com</a>.</div>
+    <div class="form-notice">&#128274; Your CV is stored securely for up to <strong>180 days</strong> under GDPR. Request deletion anytime at naumankhan@nkrecruitment.com.</div>
     <div class="form-row-2">
       <div class="form-group"><label>First Name *</label><input type="text" id="f-fname" placeholder="John"></div>
       <div class="form-group"><label>Last Name *</label><input type="text" id="f-lname" placeholder="Smith"></div>
@@ -607,7 +609,7 @@ footer{background:#08172e;padding:3rem 2.5rem 1.5rem;}
         <li><a href="#">19 Watergate St, Navan, Co. Meath</a></li>
         <li><a href="tel:+353833458472">Ire: +353 83 345 8472</a></li>
         <li><a href="tel:+923335238629">Pak: +92 333 523 8629</a></li>
-        <li><a href="mailto:naumankhan@nkrecruitment.com">naumankhan@nkrecruitment.com</a></li>
+        <li>naumankhan@nkrecruitment.com</li>
         <li><a href="#">Mon–Fri: 9:00 AM – 5:00 PM</a></li>
       </ul>
     </div>
@@ -642,22 +644,4 @@ function openModal(role,sector){
   document.body.style.overflow='hidden';
 }
 function closeModal(){document.getElementById('cv-modal').classList.remove('open');document.body.style.overflow='';}
-function closeModalOutside(e){if(e.target===document.getElementById('cv-modal'))closeModal();}
-function submitCV(){
-  var fname=document.getElementById('f-fname').value;
-  var email=document.getElementById('f-email').value;
-  var agree=document.getElementById('f-agree').checked;
-  if(!fname||!email||!agree){alert('Please fill in your name, email, and agree to the Privacy Policy.');return;}
-  document.getElementById('modal-success').style.display='block';
-  setTimeout(closeModal,3000);
-}
-
-function showPrivacy(){
-  var s=document.getElementById('privacy-section');
-  s.classList.add('open');
-  setTimeout(function(){s.scrollIntoView({behavior:'smooth'});},50);
-}
-function hidePrivacy(){document.getElementById('privacy-section').classList.remove('open');}
-</script>
-</body>
-</html>
+function closeModalOutside(e){if(e.target===docume
